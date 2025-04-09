@@ -18,6 +18,7 @@ jobs:
       uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.29.2'
+
     - name: Install dependencies
       run: flutter pub get
 
@@ -27,7 +28,5 @@ jobs:
     - name: Build Linux
       run: flutter build linux
 
-    # Optional: Build for Android (only runs in Android build context)
-    # You’ll need to configure signing if releasing
     - name: Build Android
       run: flutter build apk
